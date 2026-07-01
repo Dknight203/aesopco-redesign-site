@@ -251,13 +251,14 @@
       color: #fffaf3;
       font-weight: 800;
       white-space: nowrap;
-      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
 
     .button:hover {
       transform: translateY(-1px);
       background: var(--red);
       border-color: var(--red);
+      color: #fffaf3;
     }
 
     .button.secondary {
@@ -560,6 +561,30 @@
       color: var(--surface);
     }
 
+    .large-panel .button {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--surface);
+    }
+
+    .large-panel .button:hover {
+      background: var(--red);
+      color: var(--surface);
+      border-color: var(--red);
+    }
+
+    .large-panel .button.secondary {
+      background: transparent;
+      color: var(--surface);
+      border-color: rgba(255,250,243,.48);
+    }
+
+    .large-panel .button.secondary:hover {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--surface);
+    }
+
     .mini-stack {
       display: grid;
       gap: 14px;
@@ -631,6 +656,12 @@
       background: transparent;
       color: var(--surface);
       border-color: rgba(255,250,243,.42);
+    }
+
+    .band .button.secondary:hover {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--surface);
     }
 
     .games {
@@ -814,6 +845,12 @@
       background: var(--surface);
       color: var(--red);
       border-color: var(--surface);
+    }
+
+    .contact .button:hover {
+      background: var(--ink);
+      color: var(--surface);
+      border-color: var(--ink);
     }
 
     footer {
