@@ -23,3 +23,14 @@ Then open:
 ## Deploy
 
 This is Vercel-ready as a static site. Import the GitHub repository into Vercel and use the default static settings.
+
+## SEO / GEO
+
+Included crawl and AI-discovery files:
+
+- `robots.txt`
+- `sitemap.xml`
+- `llms.txt`
+- `vercel.json` redirect from `/hello-world/` to `/`
+
+Both pages include canonical URLs, Open Graph metadata, Twitter card metadata, and JSON-LD structured data for the organization, services, founder, FAQ, and breadcrumbs.
