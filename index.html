@@ -37,7 +37,7 @@
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://www.aesopco.com/#organization",
+        "@id": "https://www.aesopco.com/organization",
         "name": "The Aesop Agency",
         "url": "https://www.aesopco.com/",
         "logo": "https://www.aesopco.com/aesop-logo-square.png",
@@ -53,7 +53,7 @@
         },
         "founder": {
           "@type": "Person",
-          "@id": "https://www.aesopco.com/#chrisley-ceme",
+          "@id": "https://www.aesopco.com/person/chrisley-ceme",
           "name": "Chrisley Ceme",
           "jobTitle": "Chief Revenue Officer",
           "description": "Chrisley Ceme is a revenue strategist, email deliverability expert, and fractional CRO helping teams improve lead flow, sales process, and revenue operations."
@@ -76,17 +76,17 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.aesopco.com/#website",
+        "@id": "https://www.aesopco.com/website",
         "url": "https://www.aesopco.com/",
         "name": "The Aesop Agency",
-        "publisher": { "@id": "https://www.aesopco.com/#organization" }
+        "publisher": { "@id": "https://www.aesopco.com/organization" }
       },
       {
         "@type": "Service",
-        "@id": "https://www.aesopco.com/#fractional-cro-service",
+        "@id": "https://www.aesopco.com/services/fractional-cro",
         "name": "Fractional CRO Services",
         "serviceType": "Fractional Chief Revenue Officer services",
-        "provider": { "@id": "https://www.aesopco.com/#organization" },
+        "provider": { "@id": "https://www.aesopco.com/organization" },
         "areaServed": "United States",
         "description": "Fractional CRO services covering revenue strategy, sales optimization, go-to-market alignment, dashboards, sales team development, account planning, and customer success programs.",
         "audience": {
@@ -101,7 +101,7 @@
       },
       {
         "@type": "FAQPage",
-        "@id": "https://www.aesopco.com/#faq",
+        "@id": "https://www.aesopco.com/faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -243,9 +243,23 @@
     }
 
     .nav-links a,
+    .nav-links button,
     .button,
-    .text-link {
+    .text-link,
+    .footer-links button {
       text-decoration: none;
+    }
+
+    .nav-links button,
+    .footer-links button {
+      appearance: none;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-weight: inherit;
+      cursor: pointer;
     }
 
     .button {
@@ -260,6 +274,8 @@
       color: #fffaf3;
       font-weight: 800;
       white-space: nowrap;
+      font-family: inherit;
+      cursor: pointer;
       transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
 
@@ -912,7 +928,8 @@
     }
 
     footer p,
-    footer a {
+    footer a,
+    footer button {
       color: rgba(255,250,243,.72);
       font-size: 15px;
     }
@@ -992,17 +1009,17 @@
 <body>
   <div class="page-shell">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="The Aesop Agency home">
+      <a class="brand" href="/" aria-label="The Aesop Agency home">
         <img src="aesop-logo-transparent.png" alt="The Aesop Agency logo">
         <span>The Aesop Agency<small>Fractional CRO</small></span>
       </a>
       <div class="nav-links">
-        <a href="#approach">Approach</a>
-        <a href="#services">Services</a>
+        <button type="button" data-scroll="approach">Approach</button>
+        <button type="button" data-scroll="services">Services</button>
         <a href="games">Games</a>
-        <a href="#founder">Founder</a>
-        <a href="#podcast">Podcast</a>
-        <a href="#faq">FAQ</a>
+        <button type="button" data-scroll="founder">Founder</button>
+        <button type="button" data-scroll="podcast">Podcast</button>
+        <button type="button" data-scroll="faq">FAQ</button>
       </div>
       <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
     </nav>
@@ -1015,7 +1032,7 @@
           <p class="lede">The Aesop Agency helps teams turn challenges into opportunities through strategic revenue leadership, sharper go-to-market systems, and buyer signals that convert.</p>
           <div class="actions">
             <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
-            <a class="button secondary" href="#approach">See the System</a>
+            <button class="button secondary" type="button" data-scroll="approach">See the System</button>
           </div>
           <div class="hero-proof" aria-label="Aesop result highlights">
             <div class="proof-cell"><strong>34%</strong><span>Boost in customer satisfaction</span></div>
@@ -1039,8 +1056,8 @@
             <h2>Senior revenue leadership, installed where your team actually works.</h2>
             <p class="lede">A fractional CRO should do more than advise. Aesop builds the operating rhythm: strategy, dashboards, sales process, marketing alignment, account planning, and leadership coaching.</p>
             <div class="actions">
-              <a class="button" href="#services">Explore Services</a>
-              <a class="button secondary" href="#contact">Start With a Call</a>
+              <button class="button" type="button" data-scroll="services">Explore Services</button>
+              <button class="button secondary" type="button" data-scroll="contact">Start With a Call</button>
             </div>
           </div>
           <div class="mini-stack">
@@ -1204,7 +1221,7 @@
           <a class="youtube-card" href="https://www.youtube.com/@TheCROInitiative" aria-label="Open The CRO Initiative on YouTube">
             <span class="youtube-thumb">
               <img src="assets/youtube-chrisley-portrait.jpg" alt="Chrisley Ceme on The CRO Initiative">
-              <span class="youtube-mark">&#9654;</span>
+              <span class="youtube-mark">▶</span>
             </span>
             <span class="youtube-copy">
               <h3>The CRO Initiative</h3>
@@ -1266,8 +1283,8 @@
           <p>The Aesop Agency &middot; Effective storytelling drives results.</p>
         </div>
         <div class="footer-links">
-          <a href="#approach">Approach</a>
-          <a href="#services">Services</a>
+          <button type="button" data-scroll="approach">Approach</button>
+          <button type="button" data-scroll="services">Services</button>
           <a href="games">Games</a>
           <a href="https://www.youtube.com/@TheCROInitiative">YouTube</a>
           <a href="https://www.linkedin.com/company/the-aesop-agency/">LinkedIn</a>
@@ -1275,5 +1292,12 @@
       </div>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('[data-scroll]').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        document.getElementById(trigger.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>

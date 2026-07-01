@@ -37,14 +37,14 @@
     "@graph": [
       {
         "@type": "ProfessionalService",
-        "@id": "https://www.aesopco.com/#organization",
+        "@id": "https://www.aesopco.com/organization",
         "name": "The Aesop Agency",
         "url": "https://www.aesopco.com/",
         "logo": "https://www.aesopco.com/aesop-logo-square.png",
         "email": "info@aesopco.com",
         "founder": {
           "@type": "Person",
-          "@id": "https://www.aesopco.com/#chrisley-ceme",
+          "@id": "https://www.aesopco.com/person/chrisley-ceme",
           "name": "Chrisley Ceme",
           "jobTitle": "Chief Revenue Officer"
         },
@@ -56,10 +56,10 @@
       },
       {
         "@type": "Service",
-        "@id": "https://www.aesopco.com/games#post-launch-growth-service",
+        "@id": "https://www.aesopco.com/games/services/post-launch-growth",
         "name": "Aesop for Games",
         "serviceType": "Post-launch growth systems for game studios and publishers",
-        "provider": { "@id": "https://www.aesopco.com/#organization" },
+        "provider": { "@id": "https://www.aesopco.com/organization" },
         "url": "https://www.aesopco.com/games",
         "description": "Aesop for Games helps studios and publishers keep games alive after launch through revenue, community, creator, partnership, player signal, milestone retargeting, and runway systems.",
         "audience": {
@@ -84,7 +84,7 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://www.aesopco.com/games#breadcrumb",
+        "@id": "https://www.aesopco.com/games/breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -200,7 +200,21 @@
     }
 
     .nav-links a,
-    .button { text-decoration: none; }
+    .nav-links button,
+    .button,
+    .footer-links button { text-decoration: none; }
+
+    .nav-links button,
+    .footer-links button {
+      appearance: none;
+      border: 0;
+      padding: 0;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      font-weight: inherit;
+      cursor: pointer;
+    }
 
     .button {
       display: inline-flex;
@@ -214,6 +228,8 @@
       color: var(--surface);
       font-weight: 800;
       white-space: nowrap;
+      font-family: inherit;
+      cursor: pointer;
       transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
     }
 
@@ -591,7 +607,8 @@
     }
 
     footer p,
-    footer a {
+    footer a,
+    footer button {
       color: rgba(255,253,246,.72);
       font-size: 15px;
     }
@@ -663,10 +680,10 @@
       </a>
       <div class="nav-links">
         <a href="../">Fractional CRO</a>
-        <a href="#problem">Problem</a>
-        <a href="#framework">Framework</a>
-        <a href="#services">Services</a>
-        <a href="#founder">Founder</a>
+        <button type="button" data-scroll="problem">Problem</button>
+        <button type="button" data-scroll="framework">Framework</button>
+        <button type="button" data-scroll="services">Services</button>
+        <button type="button" data-scroll="founder">Founder</button>
       </div>
       <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
     </nav>
@@ -679,7 +696,7 @@
           <p class="lede">Most studios do not fail because players lose interest. They fail because momentum disappears after launch. Aesop builds lightweight systems that keep great games alive and profitable long after the hype fades.</p>
           <div class="actions">
             <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
-            <a class="button secondary" href="#framework">See the Framework</a>
+            <button class="button secondary" type="button" data-scroll="framework">See the Framework</button>
           </div>
           <div class="metric-strip">
             <div class="metric"><strong>1.6x</strong><span>Average revenue lift for studios running post-launch systems</span></div>
@@ -809,13 +826,20 @@
         </div>
         <div class="footer-links">
           <a href="../">Fractional CRO</a>
-          <a href="#problem">Problem</a>
-          <a href="#framework">Framework</a>
+          <button type="button" data-scroll="problem">Problem</button>
+          <button type="button" data-scroll="framework">Framework</button>
           <a href="https://www.youtube.com/@TheCROInitiative">YouTube</a>
           <a href="https://www.linkedin.com/company/the-aesop-agency/">LinkedIn</a>
         </div>
       </div>
     </footer>
   </div>
+  <script>
+    document.querySelectorAll('[data-scroll]').forEach((trigger) => {
+      trigger.addEventListener('click', () => {
+        document.getElementById(trigger.dataset.scroll)?.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
