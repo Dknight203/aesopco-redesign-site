@@ -723,24 +723,40 @@
         #141414;
     }
 
-    .video-box {
+    .youtube-card {
       min-height: 260px;
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 28px;
       border: 1px solid rgba(255,250,243,.22);
       border-radius: var(--radius);
-      background: rgba(255,250,243,.08);
+      background: #fffaf3;
+      color: var(--ink);
+      text-decoration: none;
+      box-shadow: var(--shadow);
     }
 
-    .play {
-      width: 82px;
-      height: 82px;
+    .youtube-mark {
+      width: 78px;
+      height: 54px;
       display: grid;
       place-items: center;
-      border: 1px solid rgba(255,250,243,.36);
-      border-radius: 999px;
-      color: var(--surface);
-      font-size: 28px;
+      border-radius: 12px;
+      background: #ff0033;
+      color: #fff;
+      font-size: 25px;
+      line-height: 1;
+    }
+
+    .youtube-card h3 {
+      margin-top: 48px;
+      color: var(--ink);
+    }
+
+    .youtube-card p {
+      margin-top: 12px;
+      color: var(--muted);
     }
 
     .faq-list {
@@ -932,7 +948,7 @@
           </div>
         </div>
         <aside class="hero-panel" aria-label="Aesop Agency brand panel">
-          <img class="backdrop" src="https://aesopco.com/wp-content/uploads/2025/02/Our-services.jpg" alt="Revenue strategy workspace">
+          <img class="backdrop" src="assets/our-services.jpg" alt="Revenue strategy workspace">
           <div class="panel-card">
             <img src="aesop-logo-square.png" alt="The Aesop Agency logo">
             <p>Guided by the mantra “effective storytelling drives results,” Aesop delivers revenue leadership without the burden of a full-time executive.</p>
@@ -971,7 +987,7 @@
       <section class="section">
         <div class="inner split">
           <div class="image-frame">
-            <img src="https://aesopco.com/wp-content/uploads/2025/02/Why-Us.jpg" alt="Aesop revenue leadership visual">
+            <img src="assets/why-us.jpg" alt="Aesop revenue leadership visual">
           </div>
           <div class="stack">
             <p class="kicker">About Aesop</p>
@@ -1057,7 +1073,7 @@
       <section class="section founder" id="founder">
         <div class="inner founder-layout">
           <div class="image-frame">
-            <img src="https://aesopco.com/wp-content/uploads/2025/02/Meet-our-founder.jpg" alt="Chrisley Ceme, founder of The Aesop Agency">
+            <img src="assets/meet-founder.jpg" alt="Chrisley Ceme, founder of The Aesop Agency">
           </div>
           <div class="founder-copy">
             <p class="kicker">Meet the founder</p>
@@ -1109,8 +1125,12 @@
               <a class="button" href="https://www.youtube.com/@TheCROInitiative">Listen Now</a>
             </div>
           </div>
-          <a class="video-box" href="https://www.youtube.com/@TheCROInitiative" aria-label="Open The CRO Initiative on YouTube">
-            <span class="play">▶</span>
+          <a class="youtube-card" href="https://www.youtube.com/@TheCROInitiative" aria-label="Open The CRO Initiative on YouTube">
+            <span class="youtube-mark">▶</span>
+            <span>
+              <h3>The CRO Initiative</h3>
+              <p>Open the YouTube channel for podcast episodes and revenue leadership conversations.</p>
+            </span>
           </a>
         </div>
       </section>
