@@ -1,0 +1,25 @@
+# The Aesop Agency Redesign Preview
+
+Static preview for the redesigned Aesop Agency site.
+
+## Pages
+
+- `index.html` - Fractional CRO / revenue systems homepage
+- `games/index.html` - Aesop for Games landing page
+
+## Local Preview
+
+Serve the folder with any static server:
+
+```bash
+python -m http.server 4177 --bind 127.0.0.1
+```
+
+Then open:
+
+- `http://127.0.0.1:4177/`
+- `http://127.0.0.1:4177/games/`
+
+## Deploy
+
+This is Vercel-ready as a static site. Import the GitHub repository into Vercel and use the default static settings.

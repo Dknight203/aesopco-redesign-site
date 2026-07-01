@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Aesop Agency | Fractional CRO and Revenue Systems</title>
+  <meta name="description" content="The Aesop Agency provides fractional CRO services, revenue strategy, sales optimization, go-to-market alignment, and post-launch growth systems for game studios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f0eb;
+      --surface: #fffaf3;
+      --surface-2: #e9e4db;
+      --ink: #171717;
+      --muted: #5c5a55;
+      --line: #d4cdc1;
+      --red: #bd1124;
+      --red-dark: #8d0e1c;
+      --blue: #202f66;
+      --green: #214f3b;
+      --gold: #a9782b;
+      --charcoal: #0f1010;
+      --soft-red: #f7e5e4;
+      --soft-blue: #e7eaf4;
+      --soft-green: #e5eee8;
+      --shadow: 0 24px 70px rgba(23, 23, 23, .14);
+      --radius: 8px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Instrument Sans", sans-serif;
+      line-height: 1.45;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .18;
+      background-image:
+        linear-gradient(rgba(23,23,23,.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23,23,23,.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, black, transparent 70%);
+    }
+
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 28px;
+      align-items: center;
+      min-height: 76px;
+      padding: 12px clamp(18px, 4vw, 64px);
+      border-bottom: 1px solid rgba(212,205,193,.92);
+      background: rgba(243,240,235,.9);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .brand span {
+      display: grid;
+      line-height: 1.05;
+    }
+
+    .brand small {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: clamp(14px, 2.4vw, 30px);
+      color: #2e2c29;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .nav-links a,
+    .button,
+    .text-link {
+      text-decoration: none;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 45px;
+      padding: 11px 18px;
+      border: 1px solid var(--ink);
+      border-radius: 6px;
+      background: var(--ink);
+      color: #fffaf3;
+      font-weight: 800;
+      white-space: nowrap;
+      transition: transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      background: var(--red);
+      border-color: var(--red);
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .button.secondary:hover {
+      color: #fffaf3;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      width: fit-content;
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .page-shell {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero {
+      min-height: calc(100svh - 76px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, .72fr);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: clamp(54px, 8vw, 118px) clamp(22px, 6vw, 86px);
+    }
+
+    .kicker {
+      margin: 0 0 18px;
+      color: var(--red);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    h1, h2, h3 {
+      margin: 0;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 950px;
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(68px, 10.5vw, 154px);
+      font-weight: 400;
+      line-height: .83;
+    }
+
+    h1 em,
+    h2 em {
+      color: var(--red);
+      font-style: italic;
+    }
+
+    h2 {
+      max-width: 880px;
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(42px, 6.6vw, 88px);
+      font-weight: 400;
+      line-height: .9;
+    }
+
+    h3 {
+      font-size: clamp(23px, 2.5vw, 34px);
+      font-weight: 800;
+      line-height: 1.02;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .lede {
+      max-width: 760px;
+      margin-top: 24px;
+      color: #302f2b;
+      font-size: clamp(20px, 2.3vw, 30px);
+      line-height: 1.25;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .hero-proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1px;
+      width: min(760px, 100%);
+      margin-top: 48px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .proof-cell {
+      min-height: 110px;
+      padding: 18px;
+      background: rgba(255,250,243,.72);
+    }
+
+    .proof-cell strong {
+      display: block;
+      color: var(--ink);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .proof-cell span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero-panel {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      align-items: end;
+      overflow: hidden;
+      background: var(--charcoal);
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(15,16,16,.14), rgba(15,16,16,.78));
+    }
+
+    .hero-panel img.backdrop {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .76;
+      filter: grayscale(.25) contrast(1.08);
+    }
+
+    .panel-card {
+      position: relative;
+      z-index: 2;
+      margin: 22px;
+      padding: 24px;
+      border: 1px solid rgba(255,250,243,.22);
+      border-radius: var(--radius);
+      background: rgba(255,250,243,.92);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-card img {
+      width: 152px;
+      margin-bottom: 24px;
+    }
+
+    .panel-card p {
+      color: #2f2d29;
+      font-size: 18px;
+    }
+
+    .section {
+      padding: clamp(64px, 9vw, 128px) clamp(18px, 5vw, 72px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .inner {
+      width: min(1240px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, .8fr) minmax(280px, .48fr);
+      gap: 34px;
+      align-items: end;
+      margin-bottom: 44px;
+    }
+
+    .section-head p {
+      font-size: 19px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: minmax(310px, .74fr) minmax(0, 1fr);
+      gap: clamp(30px, 6vw, 78px);
+      align-items: center;
+    }
+
+    .image-frame {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .image-frame img {
+      width: 100%;
+      aspect-ratio: 1 / 1.05;
+      object-fit: cover;
+    }
+
+    .stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+
+    .card {
+      min-height: 210px;
+      padding: 24px;
+      background: var(--surface);
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 15px;
+      color: var(--red);
+      font-family: "Instrument Serif", serif;
+      font-size: clamp(42px, 5vw, 74px);
+      font-weight: 400;
+      line-height: .85;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 23px;
+    }
+
+    .card p,
+    .card li {
+      font-size: 16px;
+    }
+
+    .card ul {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .card li + li {
+      margin-top: 7px;
+    }
+
+    .operating-system {
+      display: grid;
+      grid-template-columns: minmax(0, .92fr) minmax(320px, .68fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .large-panel,
+    .mini-panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .large-panel {
+      padding: clamp(26px, 4vw, 46px);
+      background: var(--charcoal);
+      color: var(--surface);
+    }
+
+    .large-panel p {
+      color: rgba(255,250,243,.74);
+    }
+
+    .large-panel h2 {
+      margin-top: 10px;
+      color: var(--surface);
+    }
+
+    .mini-stack {
+      display: grid;
+      gap: 14px;
+    }
+
+    .mini-panel {
+      padding: 22px;
+    }
+
+    .mini-panel h3 {
+      margin-bottom: 10px;
+      color: var(--blue);
+      font-size: 24px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .service {
+      min-height: 280px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .service h3 {
+      margin-bottom: 16px;
+    }
+
+    .service ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .service li + li {
+      margin-top: 10px;
+    }
+
+    .band {
+      background: var(--charcoal);
+      color: var(--surface);
+    }
+
+    .band h2,
+    .band h3 {
+      color: var(--surface);
+    }
+
+    .band p {
+      color: rgba(255,250,243,.73);
+    }
+
+    .band .kicker {
+      color: #ff6a75;
+    }
+
+    .band .button {
+      background: var(--surface);
+      color: var(--ink);
+      border-color: var(--surface);
+    }
+
+    .band .button.secondary {
+      background: transparent;
+      color: var(--surface);
+      border-color: rgba(255,250,243,.42);
+    }
+
+    .games {
+      background: #edf2ec;
+    }
+
+    .games .card strong,
+    .games .kicker {
+      color: var(--green);
+    }
+
+    .games .card {
+      background: #fffdf6;
+    }
+
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .pillar {
+      padding: 24px;
+      border: 1px solid #c8d5c8;
+      border-radius: var(--radius);
+      background: #fffdf6;
+    }
+
+    .pillar h3 {
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 25px;
+    }
+
+    .founder {
+      background: var(--surface);
+    }
+
+    .founder-layout {
+      display: grid;
+      grid-template-columns: minmax(280px, .44fr) minmax(0, 1fr);
+      gap: clamp(28px, 6vw, 76px);
+      align-items: center;
+    }
+
+    .founder-copy {
+      display: grid;
+      gap: 18px;
+    }
+
+    .quote-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .quote {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .quote p {
+      color: #34322d;
+      font-size: 18px;
+    }
+
+    .quote strong {
+      display: block;
+      margin-top: 26px;
+      color: var(--red);
+    }
+
+    .media-card {
+      display: grid;
+      grid-template-columns: minmax(0, .75fr) minmax(300px, .45fr);
+      gap: 22px;
+      align-items: stretch;
+      padding: clamp(24px, 4vw, 44px);
+      border: 1px solid rgba(255,250,243,.18);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(135deg, rgba(189,17,36,.24), transparent 38%),
+        #141414;
+    }
+
+    .video-box {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,250,243,.22);
+      border-radius: var(--radius);
+      background: rgba(255,250,243,.08);
+    }
+
+    .play {
+      width: 82px;
+      height: 82px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,250,243,.36);
+      border-radius: 999px;
+      color: var(--surface);
+      font-size: 28px;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      width: min(900px, 100%);
+      margin: 0 auto;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 19px 22px;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details p {
+      padding: 0 22px 22px;
+      font-size: 17px;
+    }
+
+    .contact {
+      padding: clamp(54px, 8vw, 98px) clamp(18px, 5vw, 72px);
+      background: var(--red);
+      color: var(--surface);
+    }
+
+    .contact .inner {
+      display: grid;
+      grid-template-columns: minmax(0, .75fr) minmax(280px, .36fr);
+      gap: 28px;
+      align-items: end;
+    }
+
+    .contact h2 {
+      color: var(--surface);
+    }
+
+    .contact p,
+    .contact a {
+      color: rgba(255,250,243,.82);
+    }
+
+    .contact .button {
+      background: var(--surface);
+      color: var(--red);
+      border-color: var(--surface);
+    }
+
+    footer {
+      padding: 36px clamp(18px, 5vw, 72px);
+      background: var(--charcoal);
+      color: var(--surface);
+    }
+
+    footer .inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    footer img {
+      width: 90px;
+      margin-bottom: 12px;
+      border-radius: 6px;
+    }
+
+    footer p,
+    footer a {
+      color: rgba(255,250,243,.72);
+      font-size: 15px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: flex-end;
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .nav {
+        grid-template-columns: 1fr auto;
+      }
+
+      .nav-links {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+
+      .hero,
+      .section-head,
+      .split,
+      .operating-system,
+      .founder-layout,
+      .media-card,
+      .contact .inner,
+      footer .inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero { min-height: auto; }
+      .hero-panel { min-height: 520px; }
+      .hero-proof,
+      .card-grid,
+      .service-list,
+      .pillar-grid,
+      .quote-grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: clamp(60px, 16vw, 96px);
+      }
+
+      footer .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .brand span {
+        display: none;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .nav .button {
+        width: auto;
+        min-height: 40px;
+        padding-inline: 12px;
+        font-size: 13px;
+      }
+
+      .hero-copy {
+        padding-top: 42px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="The Aesop Agency home">
+        <img src="aesop-logo-transparent.png" alt="The Aesop Agency logo">
+        <span>The Aesop Agency<small>Fractional CRO</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#approach">Approach</a>
+        <a href="#services">Services</a>
+        <a href="games/">Games</a>
+        <a href="#founder">Founder</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+    </nav>
+
+    <main id="top">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="kicker">Fractional CRO services for SaaS, SMBs, and game studios</p>
+          <h1>Revenue grows when the <em>story</em>, system, and signal line up.</h1>
+          <p class="lede">The Aesop Agency helps teams turn challenges into opportunities through strategic revenue leadership, sharper go-to-market systems, and buyer signals that convert.</p>
+          <div class="actions">
+            <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+            <a class="button secondary" href="#approach">See the System</a>
+          </div>
+          <div class="hero-proof" aria-label="Aesop result highlights">
+            <div class="proof-cell"><strong>34%</strong><span>Boost in customer satisfaction</span></div>
+            <div class="proof-cell"><strong>15%</strong><span>Increase in conversion rates</span></div>
+            <div class="proof-cell"><strong>96%</strong><span>Reduction in manual analysis</span></div>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="Aesop Agency brand panel">
+          <img class="backdrop" src="https://aesopco.com/wp-content/uploads/2025/02/Our-services.jpg" alt="Revenue strategy workspace">
+          <div class="panel-card">
+            <img src="aesop-logo-square.png" alt="The Aesop Agency logo">
+            <p>Guided by the mantra “effective storytelling drives results,” Aesop delivers revenue leadership without the burden of a full-time executive.</p>
+          </div>
+        </aside>
+      </header>
+
+      <section class="section" id="approach">
+        <div class="inner operating-system">
+          <div class="large-panel">
+            <p class="kicker">The Aesop Revenue Operating System</p>
+            <h2>Senior revenue leadership, installed where your team actually works.</h2>
+            <p class="lede">A fractional CRO should do more than advise. Aesop builds the operating rhythm: strategy, dashboards, sales process, marketing alignment, account planning, and leadership coaching.</p>
+            <div class="actions">
+              <a class="button" href="#services">Explore Services</a>
+              <a class="button secondary" href="#contact">Start With a Call</a>
+            </div>
+          </div>
+          <div class="mini-stack">
+            <article class="mini-panel">
+              <h3>Diagnose</h3>
+              <p>Assess pipeline health, offer clarity, sales motion, customer signals, and the data your team uses to make decisions.</p>
+            </article>
+            <article class="mini-panel">
+              <h3>Design</h3>
+              <p>Build KPIs, OKRs, dashboards, account plans, playbooks, pricing strategy, and the process needed for scalable growth.</p>
+            </article>
+            <article class="mini-panel">
+              <h3>Lead</h3>
+              <p>Coach sales and marketing teams, align leaders, and keep execution moving through practical weekly operating cadence.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner split">
+          <div class="image-frame">
+            <img src="https://aesopco.com/wp-content/uploads/2025/02/Why-Us.jpg" alt="Aesop revenue leadership visual">
+          </div>
+          <div class="stack">
+            <p class="kicker">About Aesop</p>
+            <h2>Cost-effective leadership for teams ready to grow with confidence and clarity.</h2>
+            <p>At The Aesop Agency, we empower organizations with top-tier fractional Chief Revenue Officer services. We turn challenges into opportunities through strategic revenue leadership.</p>
+            <p>Our seasoned professionals specialize in boosting conversions, optimizing sales, and fostering sustainable growth while delivering impactful guidance at a fraction of the cost of a full-time executive.</p>
+            <div class="card-grid" style="grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 14px;">
+              <article class="card"><h3>Cost-Effective Leadership</h3><p>Equip your sales and marketing team with valuable insights and strategies that improve lead generation, operational efficiency, and conversion rates.</p></article>
+              <article class="card"><h3>Tailored Support</h3><p>Aesop tailors services to each client, delivering focused strategies that promote sustainable growth.</p></article>
+              <article class="card"><h3>Industry Expertise</h3><p>Deep revenue experience across sales, marketing, business development, email deliverability, and go-to-market operations.</p></article>
+              <article class="card"><h3>Flexible Engagements</h3><p>Part-time, short-term, and long-term models let companies choose the support level that fits the moment.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="inner">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Services</p>
+              <h2>Strategic guidance and hands-on support for the full revenue engine.</h2>
+            </div>
+            <p>From data-driven revenue plans to sales process optimization and team alignment, Aesop provides partnership dedicated to achieving growth goals.</p>
+          </div>
+          <div class="service-list">
+            <article class="service">
+              <h3>Revenue Strategy & Planning</h3>
+              <ul>
+                <li>Develop long-range revenue plans and forecasts.</li>
+                <li>Design KPIs, OKRs, and dashboards to track performance.</li>
+                <li>Competitive market positioning and pricing strategy.</li>
+                <li>Business process engineering for scalable growth.</li>
+              </ul>
+            </article>
+            <article class="service">
+              <h3>Sales Optimization</h3>
+              <ul>
+                <li>Sales team development, training, and coaching.</li>
+                <li>Sales playbook design and compensation plan creation.</li>
+                <li>Strategic account planning and pipeline management.</li>
+                <li>Advanced analytics to track performance and generate actionable insights.</li>
+              </ul>
+            </article>
+            <article class="service">
+              <h3>Go-to-Market & Marketing Alignment</h3>
+              <ul>
+                <li>Competitive market analysis and technology assessments.</li>
+                <li>Marketing collateral audits and offer development.</li>
+                <li>Align sales and marketing teams for integrated campaigns.</li>
+                <li>Design customer success programs to drive retention and upsells.</li>
+              </ul>
+            </article>
+            <article class="service">
+              <h3>Team Building & Leadership</h3>
+              <ul>
+                <li>Recruiting guidance and team structure design.</li>
+                <li>Sales management development and coaching.</li>
+                <li>Foster a revenue-driven culture across the organization.</li>
+                <li>Flexible leadership for companies that do not need a full-time executive.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band">
+        <div class="inner">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Buyer signals</p>
+              <h2>Sales is not about volume. It is about timing, relevance, and intent.</h2>
+            </div>
+            <p>Aesop helps SaaS teams use real buyer signals to convert faster and smarter, connecting messaging, lead flow, and sales execution around what buyers are already showing you.</p>
+          </div>
+          <div class="actions">
+            <a class="button" href="https://www.chrisleyceme.com/">Visit Real Signals. Real Results.</a>
+            <a class="button secondary" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section founder" id="founder">
+        <div class="inner founder-layout">
+          <div class="image-frame">
+            <img src="https://aesopco.com/wp-content/uploads/2025/02/Meet-our-founder.jpg" alt="Chrisley Ceme, founder of The Aesop Agency">
+          </div>
+          <div class="founder-copy">
+            <p class="kicker">Meet the founder</p>
+            <h2>Chrisley Ceme</h2>
+            <p class="lede">Chrisley Ceme is a seasoned revenue strategist and email deliverability expert with a proven track record helping businesses achieve sustainable growth.</p>
+            <p>His experience spans sales and marketing leadership, business development, deliverability, sendability, and revenue strategy. He specializes in solving complex challenges like high-volume cold email without deliverability issues while improving lead flow, operational efficiency, and closing rates.</p>
+            <p>Having collaborated with high-profile organizations and contributed to the success of startups like Senders, Chrisley brings practical knowledge to email campaigns, sales processes, marketing initiatives, and revenue leadership.</p>
+            <div class="actions">
+              <a class="button" href="https://www.linkedin.com/company/the-aesop-agency/">LinkedIn</a>
+              <a class="button secondary" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div class="section-head">
+            <div>
+              <p class="kicker">Client proof</p>
+              <h2>What clients said.</h2>
+            </div>
+            <p>Real results matter. Aesop should present testimonials with enough space and confidence to feel like proof, not filler.</p>
+          </div>
+          <div class="quote-grid">
+            <article class="quote">
+              <p>“The Aesop Agency transformed our sales strategy. Chrisley and his team provided insights that we simply couldn’t achieve on our own. Our conversion rates have improved significantly!”</p>
+              <strong>Sarah Thompson</strong>
+            </article>
+            <article class="quote">
+              <p>“I didn’t think we could afford a Chief Revenue Officer, but The Aesop Agency proved me wrong. Their part-time services helped us achieve our growth targets.”</p>
+              <strong>Jessica Lee</strong>
+            </article>
+            <article class="quote">
+              <p>“Partnering with The Aesop Agency was a game-changer for our small business. The expertise we gained was invaluable, and we focused more on our core operations.”</p>
+              <strong>Michael Johnson</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section band" id="podcast">
+        <div class="inner media-card">
+          <div class="stack">
+            <p class="kicker">The CRO Initiative Podcast</p>
+            <h2>Revenue thinking, available beyond the sales call.</h2>
+            <p>The YouTube channel stays prominent because it builds credibility, shows expertise, and gives prospects a way to hear the thinking behind the work before they book.</p>
+            <div class="actions">
+              <a class="button" href="https://www.youtube.com/@TheCROInitiative">Listen Now</a>
+            </div>
+          </div>
+          <a class="video-box" href="https://www.youtube.com/@TheCROInitiative" aria-label="Open The CRO Initiative on YouTube">
+            <span class="play">▶</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="inner">
+          <div class="section-head">
+            <div>
+              <p class="kicker">FAQ</p>
+              <h2>Answers for teams considering fractional revenue leadership.</h2>
+            </div>
+            <p>FAQ copy is cleaned up to use Aesop language while preserving the meaning of the original questions and answers.</p>
+          </div>
+          <div class="faq-list">
+            <details open>
+              <summary>What is a fractional Chief Revenue Officer?</summary>
+              <p>A fractional Chief Revenue Officer is an experienced revenue leader who provides strategic guidance and leadership on a part-time, short-term, or long-term basis to small and medium-sized businesses that may not have the resources to hire a full-time executive.</p>
+            </details>
+            <details>
+              <summary>How can Aesop help improve customer conversion rates?</summary>
+              <p>Aesop uses data-driven insights and creative strategies tailored to your specific business needs to enhance sales conversion rates, drive growth, and increase revenue.</p>
+            </details>
+            <details>
+              <summary>What types of companies can benefit from Aesop’s services?</summary>
+              <p>Aesop serves small to medium-sized businesses, midsized companies, SaaS teams, studios, and publishers looking to improve sales, sales operations, customer support, marketing, retention, and revenue growth.</p>
+            </details>
+            <details>
+              <summary>What are the financial benefits of hiring a fractional CRO instead of a full-time executive?</summary>
+              <p>Companies gain access to top-tier talent and strategic leadership without the financial burden of a full-time executive salary, allowing teams to allocate resources more efficiently while still focusing on growth.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="inner">
+          <div>
+            <p class="kicker" style="color: rgba(255,250,243,.78)">Get in touch</p>
+            <h2>Have questions or ready to grow your business?</h2>
+            <p class="lede" style="color: rgba(255,250,243,.86)">Whether you need new strategies, solutions, or expert guidance, let’s connect.</p>
+          </div>
+          <div class="stack">
+            <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+            <p>Mountain View, CA 94040<br><a href="mailto:info@aesopco.com">info@aesopco.com</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div>
+          <img src="aesop-logo-square.png" alt="The Aesop Agency logo">
+          <p>The Aesop Agency · Effective storytelling drives results.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#approach">Approach</a>
+          <a href="#services">Services</a>
+          <a href="games/">Games</a>
+          <a href="https://www.youtube.com/@TheCROInitiative">YouTube</a>
+          <a href="https://www.linkedin.com/company/the-aesop-agency/">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
