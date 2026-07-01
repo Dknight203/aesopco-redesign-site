@@ -1,13 +1,13 @@
-# The Aesop Agency Redesign Preview
+# The Aesop Agency Site
 
-Static preview for the redesigned Aesop Agency site.
+Static Vercel site for The Aesop Agency.
 
 ## Pages
 
 - `index.html` - Fractional CRO / revenue systems homepage
 - `games/index.html` - Aesop for Games landing page
 
-## Local Preview
+## Local Development
 
 Serve the folder with any static server:
 
@@ -26,7 +26,7 @@ This is Vercel-ready as a static site. Import the GitHub repository into Vercel 
 
 ## SEO / GEO
 
-Included crawl and AI-discovery files:
+Included search and AI-discovery files:
 
 - `robots.txt`
 - `sitemap.xml`
