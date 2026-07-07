@@ -1,4 +1,4 @@
-﻿# The Aesop Agency
+# The Aesop Agency
 
 > The Aesop Agency provides fractional Chief Revenue Officer services for small and midsized businesses, SaaS teams, and growth-stage companies. Aesop also offers a separate post-launch growth service for game studios and publishers at `/games`.
 

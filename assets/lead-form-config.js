@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Lead capture config for the Revenue Diagnostic (/revenue-diagnostic/).
  *
  * Setup (~5 minutes):

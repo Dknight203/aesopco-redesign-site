@@ -1,4 +1,4 @@
-﻿# The Aesop Agency Site
+# The Aesop Agency Site
 
 Static Vercel site for The Aesop Agency.
 
