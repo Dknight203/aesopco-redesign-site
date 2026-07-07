@@ -1,0 +1,406 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5FVC5FCBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E5FVC5FCBB');
+  </script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Revenue Diagnostic | The Aesop Agency</title>
+  <meta name="description" content="Answer 7 questions about your pipeline, sales process, and go-to-market alignment to get a personalized revenue diagnostic score and see exactly where your revenue engine is breaking down.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="The Aesop Agency">
+  <meta name="theme-color" content="#bd1124">
+  <link rel="canonical" href="https://www.aesopco.com/revenue-diagnostic">
+  <link rel="alternate" type="text/plain" href="https://www.aesopco.com/llms.txt" title="LLMs.txt">
+  <link rel="icon" type="image/png" href="/aesop-logo-square.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Aesop Agency">
+  <meta property="og:title" content="Free Revenue Diagnostic | The Aesop Agency">
+  <meta property="og:description" content="A 2-minute diagnostic that scores your pipeline, sales process, and go-to-market alignment and shows you exactly where revenue is leaking.">
+  <meta property="og:url" content="https://www.aesopco.com/revenue-diagnostic">
+  <meta property="og:image" content="https://www.aesopco.com/aesop-logo-square.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Revenue Diagnostic | The Aesop Agency">
+  <meta name="twitter:description" content="A 2-minute diagnostic that scores your pipeline, sales process, and go-to-market alignment and shows you exactly where revenue is leaking.">
+  <meta name="twitter:image" content="https://www.aesopco.com/aesop-logo-square.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.aesopco.com/organization",
+        "name": "The Aesop Agency",
+        "url": "https://www.aesopco.com/",
+        "logo": "https://www.aesopco.com/aesop-logo-square.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.aesopco.com/revenue-diagnostic/breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aesopco.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Revenue Diagnostic", "item": "https://www.aesopco.com/revenue-diagnostic" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="The Aesop Agency home">
+        <img src="/aesop-logo-transparent.png" alt="The Aesop Agency logo">
+        <span>The Aesop Agency<small>Fractional CRO</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Approach</a>
+        <a href="/">Services</a>
+        <a href="/blog">Blog</a>
+        <a href="/">Founder</a>
+      </div>
+      <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+    </nav>
+
+    <main>
+      <section class="section">
+        <div class="inner narrow" style="text-align:center;">
+          <p class="kicker">Free Revenue Diagnostic</p>
+          <h1 style="font-size:clamp(38px,6vw,64px);">Where is your revenue engine actually breaking down?</h1>
+          <p class="lede" style="margin-left:auto;margin-right:auto;">7 quick questions. Two minutes. A personalized score across pipeline, process, and go-to-market alignment &mdash; and the one thing to fix first.</p>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <div class="quiz-shell">
+
+          <div id="panel-intro">
+            <p style="font-size:18px;color:#302f2b;margin-bottom:24px;">This mirrors the same Diagnose &rarr; Design &rarr; Lead framework we run with clients &mdash; just compressed into something you can do yourself in two minutes.</p>
+            <button class="button" id="startBtn" style="width:100%;">Start the Diagnostic</button>
+          </div>
+
+          <div id="panel-quiz" class="hidden">
+            <div class="quiz-progress"><div class="quiz-progress-fill" id="progressFill"></div></div>
+            <p class="quiz-step-label" id="stepLabel">Question 1 of 7</p>
+            <p class="quiz-question" id="questionText"></p>
+            <div class="quiz-options" id="optionsContainer"></div>
+          </div>
+
+          <div id="panel-teaser" class="hidden">
+            <div class="quiz-score-display">
+              <p class="quiz-step-label">Your Revenue Diagnostic Score</p>
+              <div class="quiz-score-number" id="scoreNumber">0</div>
+              <div class="quiz-score-label" id="scoreLabel">&mdash;</div>
+            </div>
+            <form id="leadForm" class="quiz-email-gate">
+              <p style="text-align:center;font-size:16px;">Enter your email to see your full breakdown &mdash; including your weakest area and the recommended next step.</p>
+              <input type="email" id="emailInput" placeholder="you@company.com" required autocomplete="email">
+              <button type="submit" class="button">See My Full Breakdown</button>
+            </form>
+          </div>
+
+          <div id="panel-results" class="hidden">
+            <div class="quiz-score-display">
+              <p class="quiz-step-label">Your Revenue Diagnostic Score</p>
+              <div class="quiz-score-number" id="resultScoreNumber">0</div>
+              <div class="quiz-score-label" id="resultScoreLabel">&mdash;</div>
+            </div>
+            <p id="resultDiagnosis" style="margin-top:18px;font-size:17px;color:#302f2b;"></p>
+
+            <div style="margin-top:26px;padding:20px;border-radius:8px;background:var(--soft-red);border:1px solid var(--red);">
+              <p class="quiz-step-label" style="color:var(--red);">Biggest opportunity</p>
+              <h3 id="weakestPillarName" style="margin-bottom:8px;"></h3>
+              <p id="weakestPillarText" style="font-size:16px;"></p>
+            </div>
+
+            <div class="quiz-breakdown" id="pillarBreakdown"></div>
+
+            <div class="actions" style="margin-top:28px;justify-content:center;">
+              <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call to Fix It</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="inner">
+          <div style="text-align:center;margin-bottom:30px;">
+            <p class="kicker">Client proof</p>
+            <h2 style="font-size:clamp(28px,4vw,44px);">What clients said.</h2>
+          </div>
+          <div class="quote-grid">
+            <article class="quote">
+              <p>"The Aesop Agency transformed our sales strategy. Our conversion rates have improved significantly!"</p>
+              <strong>Sarah Thompson</strong>
+            </article>
+            <article class="quote">
+              <p>"I didn't think we could afford a Chief Revenue Officer. The Aesop Agency proved me wrong."</p>
+              <strong>Jessica Lee</strong>
+            </article>
+            <article class="quote">
+              <p>"Partnering with The Aesop Agency was a game-changer for our small business."</p>
+              <strong>Michael Johnson</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div>
+          <img src="/aesop-logo-square.png" alt="The Aesop Agency logo">
+          <p>The Aesop Agency &middot; Effective storytelling drives results.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/">Approach</a>
+          <a href="/blog">Blog</a>
+          <a href="/">Founder</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/lead-form-config.js"></script>
+  <script>
+  (function () {
+    var QUESTIONS = [
+      {
+        pillar: "Pipeline Visibility",
+        text: "How confident are you in your current sales pipeline data?",
+        options: [
+          "Honestly, it's mostly gut feel and spreadsheets nobody trusts.",
+          "We have a CRM but reps update it inconsistently.",
+          "Pipeline data is decent but we don't review it on a regular cadence.",
+          "We have live dashboards and a weekly pipeline review that drives decisions."
+        ]
+      },
+      {
+        pillar: "Offer Clarity",
+        text: "If you asked five people on your team to describe your ideal customer and offer, what would happen?",
+        options: [
+          "Five different answers.",
+          "Most would agree on the customer, fewer on the offer.",
+          "General alignment, but the pitch varies rep to rep.",
+          "Everyone gives a consistent, tested answer."
+        ]
+      },
+      {
+        pillar: "Sales Process",
+        text: "How would you describe your sales process?",
+        options: [
+          "Every rep does their own thing.",
+          "We have a loose process, but it's not written down.",
+          "There's a documented playbook, but it's not consistently followed.",
+          "A documented, trained, consistently-used playbook."
+        ]
+      },
+      {
+        pillar: "KPIs & Dashboards",
+        text: "How do you track revenue performance?",
+        options: [
+          "We look at revenue at the end of the month and hope.",
+          "We track revenue but not the leading indicators that predict it.",
+          "We have KPI dashboards, but they're not tied to specific actions.",
+          "Leading-indicator dashboards reviewed weekly, tied to specific actions."
+        ]
+      },
+      {
+        pillar: "Sales &amp; Marketing Alignment",
+        text: "How aligned are sales and marketing on what a qualified lead looks like?",
+        options: [
+          "Sales says marketing sends junk leads; marketing says sales doesn't follow up.",
+          "There's an informal understanding, but no shared definition.",
+          "A shared lead definition exists, but it's rarely revisited.",
+          "Sales and marketing share a definition, a feedback loop, and revisit it regularly."
+        ]
+      },
+      {
+        pillar: "Buyer Signals &amp; Account Planning",
+        text: "How do you decide which accounts or deals to prioritize this week?",
+        options: [
+          "Whoever's loudest or most recent gets the attention.",
+          "Gut instinct about which deals feel closest.",
+          "Some signal tracking (usage, engagement), but not systematized.",
+          "A defined buyer-signal framework  -  timing, relevance, intent  -  drives prioritization."
+        ]
+      },
+      {
+        pillar: "Retention &amp; Expansion Signals",
+        text: "How early do you know when a customer is at risk of churning or ready to expand?",
+        options: [
+          "Usually when they cancel, or when they ask to upgrade.",
+          "Sometimes customer success flags something, but it's reactive.",
+          "We track some health signals but don't act on them systematically.",
+          "Health signals feed a proactive playbook for renewal and expansion."
+        ]
+      }
+    ];
+
+    var PILLAR_ADVICE = [
+      "Reps and leadership are making decisions on data nobody actually trusts  -  which means forecasts are guesses and deals slip without warning. Fixing this starts with a pipeline structure everyone actually updates.",
+      "Every rep is pitching a slightly different company. That inconsistency shows up as longer sales cycles and a brand that feels different depending on who a prospect talks to.",
+      "Without a consistent process, your results depend entirely on your best rep's instincts  -  and that doesn't scale, and it doesn't survive that rep leaving.",
+      "You can't manage what you don't measure early enough to act on. Tracking revenue after the fact means every fix is a reaction, not a decision.",
+      "When sales and marketing don't agree on a qualified lead, marketing gets blamed for volume and sales gets blamed for follow-up  -  and the real problem, a shared definition, never gets fixed.",
+      "Without a real signal framework, your team is spending equal time on deals that were never going to close and deals that were ready to sign weeks ago.",
+      "By the time churn or expansion is obvious, it's already too late to influence it. The signal existed weeks earlier  -  it just wasn't being tracked."
+    ];
+
+    var BUCKETS = [
+      { max: 24, label: "Reactive", text: "Your revenue engine is running on instinct and firefighting. Nothing is necessarily broken beyond repair, but decisions are being made without the data or process to back them up  -  which means growth is unpredictable and every good quarter is partly luck." },
+      { max: 49, label: "Developing", text: "You have real pieces in place  -  a CRM, some process, some tracking  -  but they're not consistently used or connected to each other. That gap between 'we have this' and 'we actually run on this' is exactly where revenue leaks." },
+      { max: 74, label: "Structured", text: "Most of the operating system is in place and being used. The remaining gaps are specific, not systemic  -  which means targeted fixes, not a rebuild, will move the needle fastest." },
+      { max: 100, label: "Optimized", text: "You're running a genuinely disciplined revenue operation. At this stage, the highest-leverage work is usually pressure-testing what's already working and finding the next constraint before it becomes visible in the numbers." }
+    ];
+
+    var answers = new Array(QUESTIONS.length).fill(null);
+    var current = 0;
+
+    var panelIntro = document.getElementById('panel-intro');
+    var panelQuiz = document.getElementById('panel-quiz');
+    var panelTeaser = document.getElementById('panel-teaser');
+    var panelResults = document.getElementById('panel-results');
+
+    document.getElementById('startBtn').addEventListener('click', function () {
+      panelIntro.classList.add('hidden');
+      panelQuiz.classList.remove('hidden');
+      renderQuestion();
+    });
+
+    function renderQuestion() {
+      var q = QUESTIONS[current];
+      document.getElementById('stepLabel').textContent = 'Question ' + (current + 1) + ' of ' + QUESTIONS.length;
+      document.getElementById('progressFill').style.width = Math.round((current / QUESTIONS.length) * 100) + '%';
+      document.getElementById('questionText').innerHTML = q.text;
+
+      var container = document.getElementById('optionsContainer');
+      container.innerHTML = '';
+      q.options.forEach(function (optionText, idx) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'quiz-option';
+        btn.innerHTML = optionText;
+        btn.addEventListener('click', function () { selectAnswer(idx); });
+        container.appendChild(btn);
+      });
+    }
+
+    function selectAnswer(idx) {
+      answers[current] = idx + 1;
+      current++;
+      if (current < QUESTIONS.length) {
+        renderQuestion();
+      } else {
+        document.getElementById('progressFill').style.width = '100%';
+        showTeaser();
+      }
+    }
+
+    function computeScore() {
+      var raw = answers.reduce(function (sum, v) { return sum + v; }, 0);
+      var min = QUESTIONS.length * 1, max = QUESTIONS.length * 4;
+      return Math.round(((raw - min) / (max - min)) * 100);
+    }
+
+    function bucketFor(score) {
+      for (var i = 0; i < BUCKETS.length; i++) {
+        if (score <= BUCKETS[i].max) return BUCKETS[i];
+      }
+      return BUCKETS[BUCKETS.length - 1];
+    }
+
+    function showTeaser() {
+      var score = computeScore();
+      var bucket = bucketFor(score);
+      panelQuiz.classList.add('hidden');
+      panelTeaser.classList.remove('hidden');
+      document.getElementById('scoreNumber').textContent = score;
+      document.getElementById('scoreLabel').textContent = bucket.label;
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = document.getElementById('emailInput').value.trim();
+      var score = computeScore();
+      submitLead(email, score);
+      showResults(score);
+    });
+
+    function submitLead(email, score) {
+      var cfg = window.AESOP_LEAD_FORM;
+      if (!cfg || !cfg.actionUrl || cfg.actionUrl.indexOf('REPLACE_WITH') === 0) {
+        console.warn('AESOP_LEAD_FORM is not configured yet (see assets/lead-form-config.js) -- skipping submission for:', email, score);
+        return;
+      }
+      var iframeName = 'lead_submit_frame';
+      var iframe = document.querySelector('iframe[name="' + iframeName + '"]');
+      if (!iframe) {
+        iframe = document.createElement('iframe');
+        iframe.name = iframeName;
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+      }
+      var form = document.createElement('form');
+      form.action = cfg.actionUrl;
+      form.method = 'POST';
+      form.target = iframeName;
+
+      var emailInput = document.createElement('input');
+      emailInput.type = 'hidden';
+      emailInput.name = cfg.emailField;
+      emailInput.value = email;
+      form.appendChild(emailInput);
+
+      var scoreInput = document.createElement('input');
+      scoreInput.type = 'hidden';
+      scoreInput.name = cfg.scoreField;
+      scoreInput.value = String(score);
+      form.appendChild(scoreInput);
+
+      document.body.appendChild(form);
+      form.submit();
+      document.body.removeChild(form);
+    }
+
+    function showResults(score) {
+      var bucket = bucketFor(score);
+      panelTeaser.classList.add('hidden');
+      panelResults.classList.remove('hidden');
+
+      document.getElementById('resultScoreNumber').textContent = score;
+      document.getElementById('resultScoreLabel').textContent = bucket.label;
+      document.getElementById('resultDiagnosis').textContent = bucket.text;
+
+      var weakestIdx = 0;
+      for (var i = 1; i < answers.length; i++) {
+        if (answers[i] < answers[weakestIdx]) weakestIdx = i;
+      }
+      document.getElementById('weakestPillarName').innerHTML = QUESTIONS[weakestIdx].pillar;
+      document.getElementById('weakestPillarText').textContent = PILLAR_ADVICE[weakestIdx];
+
+      var breakdown = document.getElementById('pillarBreakdown');
+      breakdown.innerHTML = '';
+      var LEVELS = ['Reactive', 'Developing', 'Structured', 'Optimized'];
+      QUESTIONS.forEach(function (q, idx) {
+        var div = document.createElement('div');
+        div.className = 'pillar' + (idx === weakestIdx ? ' weakest' : '');
+        div.innerHTML = '<h3>' + q.pillar + '</h3><p>' + LEVELS[answers[idx] - 1] + '</p>';
+        breakdown.appendChild(div);
+      });
+    }
+  })();
+  </script>
+</body>
+</html>

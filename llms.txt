@@ -1,4 +1,4 @@
-# The Aesop Agency
+﻿# The Aesop Agency
 
 > The Aesop Agency provides fractional Chief Revenue Officer services for small and midsized businesses, SaaS teams, and growth-stage companies. Aesop also offers a separate post-launch growth service for game studios and publishers at `/games`.
 
@@ -6,6 +6,8 @@
 
 - [Fractional CRO Services](https://www.aesopco.com/): Revenue strategy, sales optimization, go-to-market alignment, dashboards, sales leadership, team development, account planning, customer success programs, and sustainable growth systems.
 - [Aesop for Games](https://www.aesopco.com/games): Post-launch growth systems for game studios and publishers, including launch-to-live transition, player signal integration, milestone retargeting, creator partnerships, community loops, and runway planning.
+- [Free Revenue Diagnostic](https://www.aesopco.com/revenue-diagnostic): An interactive 7-question diagnostic that scores a company's pipeline visibility, offer clarity, sales process, KPI dashboards, sales-marketing alignment, buyer-signal usage, and retention signals.
+- [Blog](https://www.aesopco.com/blog): Revenue leadership frameworks and analysis, including the Buyer Signal Framework, email deliverability's impact on sales pipeline, SaaS revenue plateaus, the 90-day revenue operating system, forecast accuracy metrics, and patterns from real revenue audits.
 
 ## Entity Summary
 
