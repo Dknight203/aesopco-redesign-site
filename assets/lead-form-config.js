@@ -1,21 +1,27 @@
 /*
- * Lead capture config for the Revenue Diagnostic (/revenue-diagnostic/).
+ * Lead capture config for the Revenue Diagnostic (/revenue-diagnostic).
  *
- * Setup (~5 minutes):
- * 1. Create a Google Form with two short-answer fields, in this order: "Email", "Score".
- * 2. Open the live form (not the editor), right-click -> View Page Source.
- * 3. Search for `action="` to find the formResponse URL, and search for
- *    `entry.` to find the numeric field IDs for Email and Score, in the
- *    order the fields appear on the form.
- * 4. Paste the three values below. The Sheet is created automatically the
- *    first time you open the form's "Responses" tab -> the Sheets icon.
- *
- * Until these are filled in, the diagnostic still works end to end for
- * visitors (it reveals results locally) -- it just skips the network call
- * and logs a console warning instead of silently failing.
+ * Create a Google Form with short-answer fields matching the keys below.
+ * Connect the form to a Google Sheet, then paste the formResponse URL and
+ * entry IDs here. The Sheet can be exported as CSV and uploaded to Attio.
  */
 window.AESOP_LEAD_FORM = {
-  actionUrl: "REPLACE_WITH_GOOGLE_FORM_FORMRESPONSE_URL",
-  emailField: "REPLACE_WITH_ENTRY_ID_FOR_EMAIL",
-  scoreField: "REPLACE_WITH_ENTRY_ID_FOR_SCORE"
+ actionUrl: "REPLACE_WITH_GOOGLE_FORM_FORMRESPONSE_URL",
+ fields: {
+  name: "REPLACE_WITH_ENTRY_ID_FOR_NAME",
+  email: "REPLACE_WITH_ENTRY_ID_FOR_EMAIL",
+  date: "REPLACE_WITH_ENTRY_ID_FOR_DATE",
+  score: "REPLACE_WITH_ENTRY_ID_FOR_SCORE",
+  bucket: "REPLACE_WITH_ENTRY_ID_FOR_BUCKET",
+  risk: "REPLACE_WITH_ENTRY_ID_FOR_RISK",
+  weakestPillar: "REPLACE_WITH_ENTRY_ID_FOR_WEAKEST_PILLAR",
+  secondWeakestPillar: "REPLACE_WITH_ENTRY_ID_FOR_SECOND_WEAKEST_PILLAR",
+  strongestPillar: "REPLACE_WITH_ENTRY_ID_FOR_STRONGEST_PILLAR",
+  firstKpi: "REPLACE_WITH_ENTRY_ID_FOR_FIRST_KPI",
+  executiveOwner: "REPLACE_WITH_ENTRY_ID_FOR_EXECUTIVE_OWNER",
+  recommendedMove: "REPLACE_WITH_ENTRY_ID_FOR_RECOMMENDED_MOVE",
+  pillarRatings: "REPLACE_WITH_ENTRY_ID_FOR_PILLAR_RATINGS",
+  reportSummary: "REPLACE_WITH_ENTRY_ID_FOR_REPORT_SUMMARY",
+  reportText: "REPLACE_WITH_ENTRY_ID_FOR_REPORT_TEXT"
+ }
 };
