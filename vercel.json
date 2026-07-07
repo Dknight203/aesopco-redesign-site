@@ -6,17 +6,6 @@
       "source": "/hello-world/",
       "destination": "/",
       "permanent": true
-    },
-    {
-      "source": "/(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "aesopco.com"
-        }
-      ],
-      "destination": "https://www.aesopco.com/$1",
-      "permanent": true
     }
   ],
   "headers": [
