@@ -463,12 +463,16 @@
    form.method = "POST";
    form.target = iframeName;
    Object.keys(payload).forEach(function (key) {
-    if (!cfg.fields[key]) return;
-    var input = document.createElement("input");
-    input.type = "hidden";
-    input.name = cfg.fields[key];
-    input.value = payload[key];
-    form.appendChild(input);
+    var field = cfg.fields[key];
+    if (!field) return;
+    if (key === "date" && typeof field === "object") {
+     var dateValue = new Date(payload[key]);
+     appendHiddenInput(form, field.year, String(dateValue.getFullYear()));
+     appendHiddenInput(form, field.month, String(dateValue.getMonth() + 1));
+     appendHiddenInput(form, field.day, String(dateValue.getDate()));
+     return;
+    }
+    appendHiddenInput(form, field, payload[key]);
    });
    document.body.appendChild(form);
    form.submit();
@@ -508,6 +512,14 @@
     "A weekly review artifact showing how leadership will inspect " + weakestName + " and " + secondName + " without adding another vanity dashboard.",
     "A before-and-after definition of the control: what changed, who owns it, how often it is reviewed, and what decision it is supposed to improve."
    ];
+  }
+
+  function appendHiddenInput(form, name, value) {
+   var input = document.createElement("input");
+   input.type = "hidden";
+   input.name = name;
+   input.value = value;
+   form.appendChild(input);
   }
   function buildPlainReport(report) {
    return [
