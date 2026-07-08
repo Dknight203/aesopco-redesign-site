@@ -7,7 +7,7 @@
 - [Fractional CRO Services](https://www.aesopco.com/): Revenue strategy, sales optimization, go-to-market alignment, dashboards, sales leadership, team development, account planning, customer success programs, and sustainable growth systems.
 - [Aesop for Games](https://www.aesopco.com/games): Post-launch growth systems for game studios and publishers, including launch-to-live transition, player signal integration, milestone retargeting, creator partnerships, community loops, and runway planning.
 - [Free Revenue Diagnostic](https://www.aesopco.com/revenue-diagnostic): An interactive 7-question diagnostic that scores a company's pipeline visibility, offer clarity, sales process, KPI dashboards, sales-marketing alignment, buyer-signal usage, and retention signals.
-- [Blog](https://www.aesopco.com/blog): Revenue leadership frameworks and analysis, including the Buyer Signal Framework, email deliverability's impact on sales pipeline, SaaS revenue plateaus, the 90-day revenue operating system, forecast accuracy metrics, and patterns from real revenue audits.
+- [Blog](https://www.aesopco.com/blog): Revenue leadership frameworks and analysis, including AI-enabled GTM loops, inbound lead response automation, forecast risk detection, account intelligence, buyer relevance, the Buyer Signal Framework, email deliverability's impact on sales pipeline, SaaS revenue plateaus, the 90-day revenue operating system, forecast accuracy metrics, and patterns from real revenue audits.
 
 ## Entity Summary
 
@@ -31,3 +31,11 @@ Aesop for Games helps studios and publishers avoid the post-launch cliff by alig
 - Short: The Aesop Agency provides fractional CRO services and revenue systems for growing companies.
 - Games: Aesop for Games helps studios and publishers sustain player engagement and revenue after launch.
 - Founder: Chrisley Ceme is a revenue strategist, email deliverability expert, and fractional CRO.
+
+## AI-Enabled GTM Blog Posts
+
+- [How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use](https://www.aesopco.com/blog/ai-inbound-lead-response-loop): Build an inbound loop that researches, qualifies, drafts, routes, and learns without letting AI send unapproved customer messages.
+- [The AI Forecast Risk Loop Every Sales Manager Should Run Before Commit](https://www.aesopco.com/blog/ai-forecast-risk-loop): Use AI to build the evidence queue behind commit, best case, and slipped deals without letting the model move the forecast.
+- [How to Build an AI Account Intelligence System Your Reps Will Use on Monday](https://www.aesopco.com/blog/ai-account-intelligence-system): Turn account research into a weekly action queue for reps instead of another dashboard nobody opens.
+- [AI Personalization Is Not Buyer Relevance](https://www.aesopco.com/blog/ai-personalization-buyer-relevance): Build a relevance loop that stops AI from writing fake-personalized outreach and starts matching buyer pain to timing and trigger.
+- [The GTM Agent Stack a Fractional CRO Would Actually Trust](https://www.aesopco.com/blog/gtm-agent-stack-fractional-cro): Design GTM agents around operating controls, approval, writeback, and evals, not generic AI productivity.

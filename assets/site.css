@@ -239,6 +239,27 @@ article.post-body h2 { font-size: clamp(28px, 4vw, 40px); margin-top: 12px; }
 article.post-body h3 { font-size: 22px; color: var(--red); }
 article.post-body ul, article.post-body ol { color: #302f2b; font-size: 18px; line-height: 1.65; padding-left: 22px; }
 article.post-body li + li { margin-top: 8px; }
+article.post-body table {
+ width: 100%;
+ border-collapse: collapse;
+ border: 1px solid var(--line);
+ background: var(--surface);
+ font-size: 16px;
+ line-height: 1.45;
+}
+article.post-body th,
+article.post-body td {
+ padding: 14px 16px;
+ border: 1px solid var(--line);
+ text-align: left;
+ vertical-align: top;
+ color: #302f2b;
+}
+article.post-body th {
+ background: var(--soft-red);
+ color: var(--ink);
+ font-weight: 800;
+}
 article.post-body blockquote {
  margin: 0;
  padding: 20px 26px;

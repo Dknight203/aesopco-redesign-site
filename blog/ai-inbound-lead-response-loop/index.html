@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E5FVC5FCBB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-E5FVC5FCBB');
+  </script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use | The Aesop Agency</title>
+  <meta name="description" content="A practical AI inbound lead response workflow for GTM teams: trigger, data inputs, scoring, Slack handoff, human approval, CRM writeback, and learning loop.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Chrisley Ceme">
+  <meta name="theme-color" content="#bd1124">
+  <link rel="canonical" href="https://www.aesopco.com/blog/ai-inbound-lead-response-loop">
+  <link rel="alternate" type="text/plain" href="https://www.aesopco.com/llms.txt" title="LLMs.txt">
+  <link rel="icon" type="image/png" href="/aesop-logo-square.png">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="The Aesop Agency">
+  <meta property="og:title" content="How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use">
+  <meta property="og:description" content="A practical AI inbound lead response workflow for GTM teams: trigger, data inputs, scoring, Slack handoff, human approval, CRM writeback, and learning loop.">
+  <meta property="og:url" content="https://www.aesopco.com/blog/ai-inbound-lead-response-loop">
+  <meta property="og:image" content="https://www.aesopco.com/aesop-logo-square.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use">
+  <meta name="twitter:description" content="A practical AI inbound lead response workflow for GTM teams: trigger, data inputs, scoring, Slack handoff, human approval, CRM writeback, and learning loop.">
+  <meta name="twitter:image" content="https://www.aesopco.com/aesop-logo-square.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://www.aesopco.com/blog/ai-inbound-lead-response-loop/article",
+        "headline": "How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use",
+        "description": "A practical AI inbound lead response workflow for GTM teams: trigger, data inputs, scoring, Slack handoff, human approval, CRM writeback, and learning loop.",
+        "datePublished": "2026-07-08",
+        "dateModified": "2026-07-08",
+        "author": { "@type": "Person", "@id": "https://www.aesopco.com/person/chrisley-ceme", "name": "Chrisley Ceme" },
+        "publisher": { "@id": "https://www.aesopco.com/organization" },
+        "mainEntityOfPage": "https://www.aesopco.com/blog/ai-inbound-lead-response-loop",
+        "image": "https://www.aesopco.com/aesop-logo-square.png"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.aesopco.com/blog/ai-inbound-lead-response-loop/breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.aesopco.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.aesopco.com/blog" },
+          { "@type": "ListItem", "position": 3, "name": "AI Inbound Lead Response Loop", "item": "https://www.aesopco.com/blog/ai-inbound-lead-response-loop" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=Instrument+Sans:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+  <div class="page-shell">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="The Aesop Agency home">
+        <img src="/aesop-logo-transparent.png" alt="The Aesop Agency logo">
+        <span>The Aesop Agency<small>Fractional CRO</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="/">Approach</a>
+        <a href="/">Services</a>
+        <a href="/blog">Blog</a>
+        <a href="/revenue-diagnostic">Diagnostic</a>
+      </div>
+      <a class="button" href="https://calendly.com/chrisley-aesopco/30min">Book a Call</a>
+    </nav>
+
+    <main>
+      <section class="section" style="border-bottom:none;">
+        <div class="inner narrow">
+          <p class="post-meta">July 8, 2026 &middot; AI GTM &middot; Chrisley Ceme</p>
+          <h1 style="font-size:clamp(34px,5vw,58px);">How to Build an AI Inbound Lead Response Loop That Sales Will Actually Use</h1>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0;">
+        <article class="post-body">
+
+          <p>Most inbound problems are not caused by lazy reps. They are caused by a slow handoff between signal, research, judgment, and action.</p>
+
+          <p>A lead fills out a form. Someone checks the CRM. Someone researches the company. Someone decides if the person is senior enough. Someone looks for prior account history. Someone writes a response. By the time that work is done, the buyer may already be colder than the moment they raised their hand.</p>
+
+          <p>The fix is not to let AI blast a reply. The fix is to install an inbound response loop that does the evidence work fast and gives a human a better decision queue.</p>
+
+          <h2>Loop: AI inbound lead response</h2>
+          <table>
+            <thead><tr><th>Part of Loop</th><th>What It Means</th></tr></thead>
+            <tbody>
+              <tr><td>Trigger</td><td>A new contact sales, demo, trust center, pricing, or newsletter lead enters the CRM.</td></tr>
+              <tr><td>Inputs</td><td>CRM record, form source, company domain, role, seniority, prior emails, meeting notes, LinkedIn company activity, website pages viewed, and product usage if available.</td></tr>
+              <tr><td>AI work</td><td>Classify the lead, identify account context, summarize why the person may be relevant, draft a response, and flag what evidence is missing.</td></tr>
+              <tr><td>Automation</td><td>Post a Slack card to the account owner with the recommended action, reason, email draft, and source evidence.</td></tr>
+              <tr><td>Human decision</td><td>The rep approves, edits, reassigns, disqualifies, or asks for more research.</td></tr>
+              <tr><td>System update</td><td>The decision, lead score, routing reason, and approved response are written back to the CRM.</td></tr>
+              <tr><td>Learning loop</td><td>Rep edits, replies, meetings booked, disqualifications, and conversion outcomes update the prompt examples and routing rules.</td></tr>
+            </tbody>
+          </table>
+
+          <h2>What to build first</h2>
+          <p>Start with one inbound source. Do not start with every lead type. Pick the source that already creates revenue conversations but takes too long to handle.</p>
+
+          <p>In the CRM, open the lead or contact object for that source. Add or create fields for:</p>
+
+          <ul>
+            <li>Lead source</li>
+            <li>Account owner</li>
+            <li>Seniority</li>
+            <li>Company fit</li>
+            <li>Prior account activity</li>
+            <li>Recommended action</li>
+            <li>Routing reason</li>
+            <li>Human approval status</li>
+          </ul>
+
+          <h2>What counts as useful AI work</h2>
+          <p>Useful AI work is not a friendly email. Useful AI work reduces the rep's research burden and makes the next decision easier.</p>
+
+          <table>
+            <thead><tr><th>Useful Output</th><th>Weak Output</th></tr></thead>
+            <tbody>
+              <tr><td>"VP of Product at a 220-person AI infrastructure company. Viewed pricing and trust center. Prior account has two technical evaluation calls."</td><td>"This looks like a promising lead."</td></tr>
+              <tr><td>"Recommended action: route to enterprise owner and send security-led response."</td><td>"You should reach out soon."</td></tr>
+              <tr><td>"Missing evidence: no current product usage found."</td><td>"More research may be needed."</td></tr>
+            </tbody>
+          </table>
+
+          <h2>Decision rule</h2>
+          <p>If the lead is senior, from a fit account, and has viewed a high-intent page, the system creates a same-day review task. If the lead is junior, from a low-fit account, or asking for support, the system routes it away from sales.</p>
+
+          <h2>30-day implementation plan</h2>
+          <ul>
+            <li>Week 1: choose one inbound source and define fit, seniority, intent, and disqualification rules.</li>
+            <li>Week 2: connect CRM, form source, account history, and website intent data.</li>
+            <li>Week 3: send Slack review cards to reps, but require human approval before any email goes out.</li>
+            <li>Week 4: compare approved drafts, rep edits, reply rate, meeting rate, and disqualification reasons.</li>
+          </ul>
+
+          <h2>Board-level readout</h2>
+          <p><strong>Control owner:</strong> CRO or revenue operations, with sales leadership accountable for adoption.</p>
+          <p><strong>KPI:</strong> time to qualified response, meeting conversion rate, rep approval rate, and percentage of leads routed correctly.</p>
+          <p><strong>Cadence:</strong> daily lead review and weekly routing-quality inspection.</p>
+          <p><strong>Decision rule:</strong> do not allow the AI to contact buyers directly until the approval rate and meeting conversion prove the workflow is reliable.</p>
+
+          <div class="cta-block">
+            <p class="kicker">Inspect your revenue controls</p>
+            <h3>Find the weakest part of your revenue operating system.</h3>
+            <p>The Revenue Diagnostic scores seven controls before you add more automation.</p>
+            <a class="button" href="/revenue-diagnostic">Take the Free Revenue Diagnostic</a>
+          </div>
+        
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="inner">
+        <div>
+          <img src="/aesop-logo-square.png" alt="The Aesop Agency logo">
+          <p>The Aesop Agency &middot; Effective storytelling drives results.</p>
+        </div>
+        <div class="footer-links">
+          <a href="/blog">All Posts</a>
+          <a href="/revenue-diagnostic">Diagnostic</a>
+          <a href="/">Founder</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
