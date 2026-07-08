@@ -257,7 +257,9 @@ article.post-body blockquote {
  display: grid;
  gap: 14px;
 }
-.cta-block p { color: rgba(255,250,243,.78); font-size: 18px; }
+.cta-block h3 { color: var(--surface); }
+.cta-block p { color: rgba(255,250,243,.86); font-size: 18px; }
+.cta-block .kicker { color: #ff7a83; }
 .cta-block .button { background: var(--red); border-color: var(--red); color: var(--surface); width: fit-content; }
 .cta-block .button:hover { background: var(--surface); color: var(--ink); border-color: var(--surface); }
 
