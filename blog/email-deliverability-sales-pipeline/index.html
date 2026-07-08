@@ -39,7 +39,7 @@
         "headline": "Why Your Best Sales Reps Can't Save a Broken Deliverability Setup",
         "description": "Pipeline problems everyone blames on sales are sometimes an inbox placement problem. Four deliverability checks every revenue leader should run this week.",
         "datePublished": "2026-06-09",
-        "dateModified": "2026-06-09",
+        "dateModified": "2026-07-07",
         "author": { "@type": "Person", "@id": "https://www.aesopco.com/person/chrisley-ceme", "name": "Chrisley Ceme" },
         "publisher": { "@id": "https://www.aesopco.com/organization" },
         "mainEntityOfPage": "https://www.aesopco.com/blog/email-deliverability-sales-pipeline",
@@ -88,36 +88,43 @@
 
       <section class="section" style="padding-top:0;">
         <article class="post-body">
-          <p>Here's a conversation I've had with more revenue leaders than I can count: pipeline is shrinking, close rates are dropping, and everyone's looking at the sales team. New talk tracks get written. Reps get coached. A new CRM stage gets added. Nothing moves.</p>
+          <p>When pipeline weakens, leadership usually inspects the sales team first. Talk tracks get rewritten. Reps get coached. Follow-up rules get tightened. Sometimes that is the right move.</p>
 
-          <p>Then someone checks inbox placement, and half of outbound, cold <em>and</em> warm follow-up, has been landing in spam or promotions for six weeks. The sales problem was never a sales problem.</p>
+          <p>But if the message is not reaching the inbox, the best rep on the team is operating with a broken distribution system.</p>
 
-          <h2>Why revenue leaders miss this</h2>
-          <p>Deliverability lives in a blind spot between sales, marketing, and IT, sales assumes email "just works" because it's not their system to own, marketing looks at campaign-level metrics that don't surface individual sender reputation decay, and IT isn't watching the sales team's actual send behavior. Nobody owns it, so nobody catches it until pipeline has already been bleeding for a quarter.</p>
+          <h2>The hidden operating cause</h2>
+          <p>Deliverability sits between sales, marketing, and IT. That is why it gets missed. Sales assumes email works. Marketing looks at campaign-level metrics. IT watches security and domain configuration, not revenue conversion by sender reputation.</p>
 
-          <p>This is the piece of revenue leadership almost nobody with a traditional sales background actually understands, it sits below the CRM, below the playbook, in the infrastructure email rides on. I spent years in email deliverability before revenue strategy, and it's the first place I look when pipeline metrics don't add up.</p>
+          <p>The result is an ownership gap. Nobody is responsible for proving that sales email, warm follow-up, nurture, and customer communication are actually reaching the buyer.</p>
 
-          <h2>Four checks to run this week</h2>
+          <h2>The business consequence</h2>
+          <p>Deliverability failure distorts revenue data. Reply rate drops, meetings decline, sequence performance weakens, and leadership may blame message quality or rep effort. That can send the team into the wrong fix for an entire quarter.</p>
 
-          <h3>1. Check actual inbox placement, not just open rate</h3>
-          <p>Open rate tells you almost nothing anymore, Apple Mail Privacy Protection and similar features inflate it artificially. Use Google Postmaster Tools (if your volume qualifies) or a placement-testing tool to see where mail is actually landing: primary inbox, promotions, or spam.</p>
+          <p>This is not just a technical issue. It is a revenue control issue.</p>
 
-          <h3>2. Confirm SPF, DKIM, and DMARC are aligned, not just present</h3>
-          <p>Having these records isn't the same as having them correctly aligned with your actual sending domain and configured to <code>quarantine</code> or <code>reject</code> rather than <code>none</code>. Misalignment is one of the most common silent killers of sender reputation, and it can happen from a single unrelated marketing tool change.</p>
+          <h2>Four controls to inspect this week</h2>
 
-          <h3>3. Check whether sales is sending from your primary domain</h3>
-          <p>If reps are sending high-volume outbound from the same domain your product and support run on, one bad sending pattern can drag down deliverability for transactional and warm-lead email too. A dedicated sending subdomain, properly warmed, isolates the risk.</p>
+          <h3>1. Inbox placement by sender and domain</h3>
+          <p>Do not rely on open rate. Privacy features and image loading behavior make it unreliable. Use placement testing, Google Postmaster Tools where available, and mailbox-level checks to see where messages are landing.</p>
 
-          <h3>4. Track reply rate trend, not just volume sent</h3>
-          <p>Reply rate is a leading indicator of placement that most dashboards ignore. A steady decline in reply rate with stable send volume and stable list quality is one of the earliest signals that deliverability, not message quality, is degrading.</p>
+          <h3>2. SPF, DKIM, and DMARC alignment</h3>
+          <p>Presence is not enough. Records need to align with the real sending domain and the tools actually sending mail. A new outbound tool or marketing platform can quietly break alignment.</p>
 
-          <h2>The revenue leadership takeaway</h2>
-          <p>If your <a href="/blog/buyer-signal-framework">buyer signal scoring</a> looks fine on paper but conversion keeps slipping anyway, don't start with the talk track. Start with whether your signal is even reaching the buyer's inbox. This is exactly the kind of cross-domain gap a <a href="/blog/what-a-revenue-audit-finds">real revenue audit</a> is built to catch.</p>
+          <h3>3. Primary domain risk</h3>
+          <p>If outbound prospecting is sent from the same domain used for customer, product, and support communication, one bad sending pattern can put more than pipeline at risk. Dedicated, properly warmed sending domains reduce blast radius.</p>
+
+          <h3>4. Reply rate trend by segment</h3>
+          <p>Reply rate is a leading indicator. If send volume, list quality, and offer stay stable while reply rate falls, leadership should inspect deliverability before rewriting the sales playbook.</p>
+
+          <h2>The revenue leadership move</h2>
+          <p>Assign an owner for email-channel health. Add deliverability to the weekly revenue review when outbound, nurture, or follow-up is material to pipeline. Track reply rate, bounce rate, complaint risk, placement, domain health, and meetings booked by sender group.</p>
+
+          <p>If your <a href="/blog/buyer-signal-framework">buyer signal scoring</a> looks good but conversion keeps slipping, confirm the signal is reaching the buyer before assuming the buyer is not interested.</p>
 
           <div class="cta-block">
-            <p class="kicker" style="color:#ff6a75;">Not sure where the leak is?</p>
-            <h3>Find out if it's process, signal, or something underneath both.</h3>
-            <p>The free Revenue Diagnostic scores seven pillars of your revenue engine in about two minutes.</p>
+            <p class="kicker" style="color:#ff6a75;">Find the leak</p>
+            <h3>Separate process failure from signal failure.</h3>
+            <p>The free Revenue Diagnostic scores seven revenue controls so you can see where the system is weakest.</p>
             <a class="button" href="/revenue-diagnostic">Take the Free Revenue Diagnostic</a>
           </div>
         </article>
